@@ -19,7 +19,7 @@ export default function Page() {
     e.preventDefault();
     console.log(title, category, auther, content);
 
-    let data = await fetch("http://localhost:3000/api/blog", {
+    let data = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/api/blog`, {
       method: "POST",
       body: JSON.stringify({ title, category, auther, content, image }),
     });
