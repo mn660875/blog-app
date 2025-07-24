@@ -9,7 +9,7 @@ import PostList from "./components/PostList";
 // Fetch posts
 const getPosts = async () => {
   try {
-    const res = await fetch("http://localhost:3000/api/blog", {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/api/blog`, {
       cache: "no-cache",
     });
     const data = await res.json();

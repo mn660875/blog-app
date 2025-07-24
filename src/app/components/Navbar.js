@@ -6,9 +6,9 @@ export default  function Navbar(){
         <div className="w-full h-12 p-4 bg-[#007BA7] text-white flex items-center justify-between">
            <h1 className="font-semibold font-xl tracking-wide">Food Ninja</h1>
            <div className="flex items-center gap-5">
-            <Link href={`${process.env.NEXT_PUBLIC_SITE_URL}`}>Blog</Link>
+            <Link href={process.env.NEXT_PUBLIC_SITE_URL}>Blog</Link>
             <Link href={"/about"}>About</Link>
-            <Link href={"/admin"}>Admin</Link>
+            <Link href={`${process.env.NEXT_PUBLIC_SITE_URL}/admin`}>Admin</Link>
            </div>
         </div>
     )
