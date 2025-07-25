@@ -3,17 +3,23 @@ import { User } from "@/lib/model/user";
 import mongoose from "mongoose";
 import { NextResponse } from "next/server";
 
-export async function POST(request) {
-  const { username, password } = await request.json();
-  await mongoose.connect(connectionStr)
+export async function GET(request) {
+  const { searchParams } = new URL(request.url);
+  const username = searchParams.get("username");
+  const password = searchParams.get("password");
 
+  if (!username || !password) {
+    return NextResponse.json({ success: false, message: "Username and password required." });
+  }
 
-  const newUser = new User({ username, password });
-  await newUser.save();
+  await mongoose.connect(connectionStr);
 
-  if (username === password) {
+  const user = await User.findOne({ username, password });
+
+  if (user) {
     return NextResponse.json({ success: true });
   } else {
     return NextResponse.json({ success: false });
   }
 }
+

@@ -61,7 +61,7 @@ setCategory(result.category || "");
         <>
          <NavbarAdmin/>
       <div className="w-full h-screen p-6 flex items-center justify-center">
-        <form onSubmit={handleform}>
+        <form className="form" onSubmit={handleform}>
           <h1 className="text-center font-semibold text-2xl mt-2">Update Blog</h1>
           <div className="input-section">
             <label>Title:</label>

@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-form{
+.form{
     width: 500px;
     height: 490px;
     display: flex;
@@ -17,6 +17,7 @@ form{
     margin-top: 10px;
     
 }
+
 .input-section input{
     outline: none;
     border: none;
