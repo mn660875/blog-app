@@ -1,9 +1,22 @@
+"use client"
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { toast } from "react-toastify";
 
 
 
 export default function NavbarAdmin() {
+  const router= useRouter();
 
+  const logOut= ()=>{
+    toast.success("Logout successfully")
+    setTimeout(() => {
+      router.push("/");
+
+    }, 1000);
+   
+    
+  }
 
 
   return (
@@ -19,6 +32,9 @@ export default function NavbarAdmin() {
         <Link className="actions" href={"#"}>Comments</Link>
         <Link className="actions" href={"#"}>Users</Link>
 
+      </div>
+      <div>
+        <button onClick={logOut}>Logout</button>
       </div>
       
     </div>

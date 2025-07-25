@@ -31,7 +31,7 @@ export default function Page() {
       setCategory("");
       setAuther("");
       setContent("");
-      router.push("/")
+      router.push("/admin")
     } else {
       toast.error("Not Added Post");
     }
@@ -98,7 +98,7 @@ export default function Page() {
             Add Post
           </button>
 
-          <Link href={"/"}>Home</Link>
+          <Link href={"/admin"}>Home</Link>
         </form>
       </div>
     </>

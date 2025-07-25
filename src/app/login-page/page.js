@@ -1,4 +1,4 @@
-"use client";
+ "use client";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
@@ -26,7 +26,8 @@ export default function Page() {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center h-screen">
+    <div className="">
+      <div className=" flex flex-col justify-center items-center h-screen">
       <h1 className="text-2xl mb-4 font-bold">Admin Login</h1>
       <form onSubmit={handleSubmit} className="flex flex-col gap-3 w-80">
         <input
@@ -47,6 +48,7 @@ export default function Page() {
         </button>
         {error && <p className="text-red-500">{error}</p>}
       </form>
+    </div>
     </div>
   );
 }
