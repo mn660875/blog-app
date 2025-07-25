@@ -58,7 +58,7 @@ select{
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
-    width: 80%;
+    width: 90%;
     overflow-x: auto;
   }
   th{

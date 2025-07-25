@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import { toast } from "react-toastify";
 
 
 export default function Page() {
@@ -9,36 +10,34 @@ export default function Page() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
-  const router = useRouter();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
     setError("");
 
-    try {
-      const res = await fetch(
-        `/api/login?username=${encodeURIComponent(username)}&password=${encodeURIComponent(password)}`,
-        { method: "GET" }
-      );
-      const data = await res.json();
+    let data= await fetch("http://localhost:3000/api/signup",{
+      method: "POST",
+      body: JSON.stringify({username, password})
 
-      if (data.success) {
-        router.push(`/admin?username=${username}`);
-      } else {
-        setError("Invalid username or password.");
-      }
-    } catch (err) {
-      setError("An error occurred. Please try again.");
-    } finally {
-      setLoading(false);
+    })
+    data= await data.json();
+
+    if(data.success){
+      toast.success("Admin Add Successfully");
+      setPassword("")
+      setUsername("")
     }
-  };
+     else{
+     toast.error("Error while signing up")
+     }
+
+  }
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100 p-4">
       <div className="bg-white shadow-lg rounded-2xl p-6 w-full max-w-sm">
-        <h1 className="text-2xl font-bold text-center mb-5">Admin Login</h1>
+        <h1 className="text-2xl font-bold text-center mb-5">Admin Signup</h1>
         <form onSubmit={handleSubmit} className="flex flex-col gap-4">
           <input
             className="border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
@@ -53,18 +52,19 @@ export default function Page() {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
+          
           <button
             className={`bg-green-500 hover:bg-green-600 text-white font-semibold p-3 rounded-lg transition duration-200 ${
               loading ? "opacity-50 cursor-not-allowed" : ""
             }`}
             type="submit"
-            disabled={loading}
+            
           >
-            {loading ? "Logging in..." : "Login"}
+           Signup
           </button>
           {error && <p className="text-red-500 text-center">{error}</p>}
         </form>
-        <p className="mt-2 text-center">Dont have an account? <Link href={"/signup"} className="font-semibold">SignUp</Link></p>
+        <p className="mt-2 text-center">Already Have an Accout? <Link href={"/login-page"} className="font-semibold">Login</Link></p>
       </div>
     </div>
   );

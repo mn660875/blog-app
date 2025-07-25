@@ -33,6 +33,8 @@ export default function NavbarAdmin() {
         <Link className="actions" href={"/form"}>Add Blog</Link>
         
         <Link className="actions" href={"/admin/users"}>Users</Link>
+        <Link className="actions" href={"/admin/posts-chart"}>Charts</Link>
+
         <button onClick={logOut} className="bg-blue-500 p-2 rounded-lg md:absolute text-white bottom-10 cursor-pointer ">Logout</button>
       </div>
       
