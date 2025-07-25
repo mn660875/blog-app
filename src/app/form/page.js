@@ -16,7 +16,7 @@ export default function Page() {
   const [image, setImage] = useState("");
 
   const handleform = async (e) => {
-    e.preventDefault();
+     e.preventDefault();
   
 
     let data = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/api/blog`, {

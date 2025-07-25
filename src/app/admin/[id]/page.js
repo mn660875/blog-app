@@ -21,7 +21,7 @@ export default function Page(){
     
     const getUserDetails=async()=>{
     
-        let data = await fetch(`http://localhost:3000/api/blog/${id}`)
+        let data = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/api/blog/${id}`)
         data = await data.json()
         console.log(data)
         

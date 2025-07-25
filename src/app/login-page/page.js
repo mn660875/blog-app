@@ -1,6 +1,8 @@
 "use client";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
+
 
 export default function Page() {
   const [username, setUsername] = useState("");
@@ -62,6 +64,7 @@ export default function Page() {
           </button>
           {error && <p className="text-red-500 text-center">{error}</p>}
         </form>
+        <p className="mt-2 text-center">Don't have an account? <Link href={"#"} className="font-semibold">SignUp</Link></p>
       </div>
     </div>
   );
