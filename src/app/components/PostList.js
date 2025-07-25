@@ -6,9 +6,11 @@ import PostCard from "./Postcard";
 export default function PostList({ posts }) {
   const [searchTerm, setSearchTerm] = useState("");
 
-  const filteredPosts = posts.filter((post) =>
+  const filteredPosts = posts
+  .filter((post) =>
     post.title.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  )
+  .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
 
   return (
     <div className="w-full mt-5 px-4 md:px-10 flex flex-col items-center">

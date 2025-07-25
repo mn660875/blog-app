@@ -11,7 +11,7 @@ export default function Page() {
   const router= useRouter("")
   const [title, setTitle] = useState("");
   const [category, setCategory] = useState("");
-  const [auther, setAuther] = useState("");
+  const [author, setAuther] = useState("");
   const [content, setContent] = useState("");
   const [image, setImage] = useState("");
 
@@ -21,7 +21,7 @@ export default function Page() {
 
     let data = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/api/blog`, {
       method: "POST",
-      body: JSON.stringify({ title, category, auther, content, image }),
+      body: JSON.stringify({ title, category, author, content, image }),
     });
     data = await data.json();
 
@@ -65,7 +65,7 @@ export default function Page() {
             <input
               type="text"
               placeholder="Author"
-              value={auther}
+              value={author}
               onChange={(e) => setAuther(e.target.value)}
             />
           </div>
@@ -91,7 +91,7 @@ export default function Page() {
               <option value="/imgs/food-2.jpg">FOOD-2.jpg</option>
               <option value="/imgs/food-3.jpg">FOOD-3.jpg</option>
               <option value="/imgs/web-1.jpg">WEB-1.jpg</option>
-              <option value="/imgs/travel-2.jpg">Travel-2.jpg</option>
+              <option value="/imgs/travel-2.jpg">Travel-2 .jpg</option>
             </select>
           </div>
           <button className="btn" type="submit">
