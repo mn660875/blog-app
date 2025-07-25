@@ -9,7 +9,7 @@ import Navbar from "@/app/components/Navbar";
 
 export default async function PostPage({ params }) {
   const { id } = params;
-
+  await mongoose.connect(connectionStr);
   const post = await Post.findById(id).lean();
 
   if (!post) {
