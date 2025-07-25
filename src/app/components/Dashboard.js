@@ -6,7 +6,7 @@ export default  function Dashboard(){
          
 
             <div className="text-center">
-                <h1 className="font-4xl md:text-5xl font-bold">Savor Sprint</h1>
+                <h1 className="text-4xl md:text-5xl font-bold">Savor Sprint</h1>
                 <p className="text-gray-500 mt-2">A blog about food, experience and recipes.</p>
             </div>
            
