@@ -64,7 +64,7 @@ export default function Page() {
           </button>
           {error && <p className="text-red-500 text-center">{error}</p>}
         </form>
-        <p className="mt-2 text-center">Don't have an account? <Link href={"#"} className="font-semibold">SignUp</Link></p>
+        <p className="mt-2 text-center">Dont have an account? <Link href={"#"} className="font-semibold">SignUp</Link></p>
       </div>
     </div>
   );
