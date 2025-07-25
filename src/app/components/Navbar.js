@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 export default  function Navbar(){
     const router= useRouter()
     return (
-        <div className="w-full h-12 p-4 bg-[#007BA7] text-white flex items-center justify-between">
+        <div className="w-full h-12 p-4 bg-[#006D6F] text-white flex items-center justify-between">
            <h1 className="font-semibold font-xl tracking-wide">Savor Sprint</h1>
            <div className="flex items-center gap-5">
             <Link href={`${process.env.NEXT_PUBLIC_SITE_URL}`}>Blog</Link>
