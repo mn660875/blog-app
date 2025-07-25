@@ -3,7 +3,7 @@ import NavbarAdmin from "./NavbarAdmin";
 import DeleteBlog from "@/lib/DeleteBlog";
 
 const getPost = async () => {
-  let data = await fetch(`http://localhost:3000/api/blog`, {
+  let data = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/api/blog`, {
     cache: "no-cache",
   });
   data = await data.json();

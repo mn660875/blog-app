@@ -8,7 +8,7 @@ export default function DeleteBlog(props){
     const deleteRecord=async()=>{
         const confirmDelete = window.confirm("Are you sure you want to delete this blog?");
         if (!confirmDelete) return;
-        let response= await fetch(  `http://localhost:3000/api/blog/${props.id}`,{
+        let response= await fetch(  `${process.env.NEXT_PUBLIC_SITE_URL}/api/blog/${props.id}`,{
             method:"DELETE",
             })
             response= await response.json();
