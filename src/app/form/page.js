@@ -91,6 +91,7 @@ export default function Page() {
               <option value="/imgs/food-2.jpg">FOOD-2.jpg</option>
               <option value="/imgs/food-3.jpg">FOOD-3.jpg</option>
               <option value="/imgs/web-1.jpg">WEB-1.jpg</option>
+              <option value="/imgs/travel-2.jpg">Travel-2.jpg</option>
             </select>
           </div>
           <button className="btn" type="submit">
