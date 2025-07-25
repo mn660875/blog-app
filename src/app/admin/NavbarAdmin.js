@@ -29,9 +29,10 @@ export default function NavbarAdmin() {
       </div>
 
       <div className="flex items-center md:flex-col justify-center gap-3 md:mt-6  text-lg ">
+      <Link href={"/admin"}>Home</Link>
         <Link className="actions" href={"/form"}>Add Blog</Link>
         
-        <Link className="actions" href={"admin/users"}>Users</Link>
+        <Link className="actions" href={"/admin/users"}>Users</Link>
 
       </div>
       <div className="flex items-center justify-center">

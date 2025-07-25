@@ -40,7 +40,7 @@ setCategory(result.category || "");
 
     const handleform=async(e)=>{
         e.preventDefault()
-        let data= await fetch(`http://localhost:3000/api/blog/${id}`,{
+        let data= await fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/api/blog/${id}`,{
             method:"PUT",
             body: JSON.stringify({title, author, content, image, category })
         })
@@ -118,7 +118,7 @@ setCategory(result.category || "");
             Add Post
           </button>
 
-          <Link href={"/admin"}>Home</Link>
+          
         </form>
       </div>
     </>

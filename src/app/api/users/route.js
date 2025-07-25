@@ -6,7 +6,7 @@ import { NextResponse } from "next/server";
 export async function GET() {
   await mongoose.connect(connectionStr);
 
-  const users = await User.find(); // only fetch usernames
+  const users = await User.find(); 
 
   return NextResponse.json({ success: true, users });
 }
