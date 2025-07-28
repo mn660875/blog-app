@@ -15,8 +15,8 @@ export default function Page() {
     e.preventDefault();
     setLoading(true);
     setError("");
-
-    let data= await fetch("http://localhost:3000/api/signup",{
+    localStorage.setItem("username", username);
+    let data= await fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/api/signup`,{
       method: "POST",
       body: JSON.stringify({username, password})
 

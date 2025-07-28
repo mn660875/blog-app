@@ -21,7 +21,7 @@ export default async function Page() {
   return (
     <main>
       <NavbarAdmin />
-      <div className="ml-40 p-4">
+      <div className="md:ml-40 p-4">
         {" "}
         {/* ADDED ml-40 */}
         <h2 className="text-2xl font-bold">Dashboard</h2>

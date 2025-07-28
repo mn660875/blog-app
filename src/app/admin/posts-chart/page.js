@@ -28,7 +28,7 @@ export default function PostsChartPage() {
     <main>
 
     <NavbarAdmin/>
-    <div className="max-w-3xl mx-auto   p-4 ml-40">
+    <div className="max-w-3xl mx-auto   p-4 md:ml-40">
       <h1 className="text-2xl font-bold mb-4 text-center">Posts Per Day</h1>
       <ResponsiveContainer width="100%" height={400}>
         <LineChart data={chartData}>

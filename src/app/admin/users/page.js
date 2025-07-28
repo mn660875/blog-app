@@ -31,7 +31,7 @@ export default function UsersPage() {
     <main>
      <NavbarAdmin/>
     
-    <div className="ml-40 p-4 w-80">
+    <div className="md:ml-40 p-4 w-80">
         <h1 className="text-4xl font-bold">User List</h1>
        <table>
         <thead>
