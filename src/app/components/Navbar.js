@@ -1,4 +1,5 @@
 "use client"
+import ThemeToggleButton from "@/components/ui/theme-toggle-button";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
@@ -14,6 +15,7 @@ export default  function Navbar(){
         className="bg-blue-500 text-white px-6 py-3 rounded"
         onClick={() => router.push("/login-page")}
       >Admin</button>
+      <ThemeToggleButton variant="circle-blur"/>
            </div>
         </div>
     )

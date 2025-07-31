@@ -26,7 +26,7 @@ export default function PostList({ posts }) {
       {/* Posts Grid */}
       <div className="md:w-[80%] grid grid-cols-1 md:grid-cols-2 gap-4 content-center">
         {filteredPosts.length === 0 ? (
-          <p>No posts found.</p>
+          <op></op>
         ) : (
           filteredPosts.map((post) => (
             <PostCard key={post._id} post={post} />

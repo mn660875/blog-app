@@ -43,16 +43,16 @@ export default async function PostPage({ params }) {
 
       {/* Title */}
       <h1 className="text-3xl font-bold">{post.title}</h1>
-      <p className="text-gray-600">{post.author}</p>
+      <p className="">{post.author}</p>
 
       {/* Date */}
-      <div className="flex items-center text-gray-500 text-sm">
+      <div className="flex items-center text-sm">
         <Calendar className="w-4 h-4 mr-1" />
         {format(new Date(post.createdAt), "dd MMM yyyy")}
       </div>
 
       {/* Content */}
-      <p className="text-gray-700 whitespace-pre-line">
+      <p className=" whitespace-pre-line">
         {post.content}
       </p>  
 

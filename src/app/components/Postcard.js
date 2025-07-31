@@ -7,7 +7,7 @@ import { format } from "date-fns";
 
 export default function PostCard({ post }) {
   return (
-    <div className="bg-white rounded-xl shadow hover:shadow-md transition flex flex-col overflow-hidden">
+    <div className=" rounded-xl shadow hover:shadow-md transition flex flex-col overflow-hidden">
       {/* Image */}
       {post.image && (
         <Link href={`/form/${post._id}`}>
@@ -29,13 +29,13 @@ export default function PostCard({ post }) {
           <div className="cursor-pointer">
             {/* Category */}
             {post.category && (
-              <p className="bg-blue-900 text-sm text-white p-1 px-2 rounded-md w-fit mb-1">
+              <p className="bg-blue-900 text-sm text-white  p-1 px-2 rounded-md w-fit mb-1">
                 {post.category}
               </p>
             )}
 
             {/* Title */}
-            <h2 className="text-xl font-semibold text-gray-800 hover:text-blue-600 transition line-clamp-2">
+            <h2 className="text-xl font-semibold  hover:text-blue-600 transition line-clamp-2">
               {post.title}
             </h2>
           </div>
@@ -43,14 +43,14 @@ export default function PostCard({ post }) {
 
         {/* Date */}
         {post.createdAt && (
-          <div className="flex items-center text-gray-500 text-sm">
+          <div className="flex items-center text-gray-200 text-sm">
             <Calendar className="w-4 h-4 mr-1" />
             {format(new Date(post.createdAt), "dd MMM yyyy")}
           </div>
         )}
 
         {/* Content preview */}
-        <p className="text-gray-700 line-clamp-3">
+        <p className=" line-clamp-3">
           {post.content?.slice(0, 120)}...
         </p>
 
