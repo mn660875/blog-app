@@ -43,7 +43,7 @@ export default function PostCard({ post }) {
 
         {/* Date */}
         {post.createdAt && (
-          <div className="flex items-center text-gray-200 text-sm">
+          <div className="flex items-center  text-sm">
             <Calendar className="w-4 h-4 mr-1" />
             {format(new Date(post.createdAt), "dd MMM yyyy")}
           </div>
