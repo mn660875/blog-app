@@ -35,8 +35,8 @@ export default function Page() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100 p-4">
-      <div className="bg-white shadow-lg rounded-2xl p-6 w-full max-w-sm">
+    <div className="min-h-screen flex items-center justify-center  p-4">
+      <div className=" shadow-lg rounded-2xl p-6 w-full max-w-sm">
         <h1 className="text-2xl font-bold text-center mb-5">Admin Signup</h1>
         <form onSubmit={handleSubmit} className="flex flex-col gap-4">
           <input

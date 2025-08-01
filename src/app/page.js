@@ -1,6 +1,9 @@
+
+import ImageCursorTrail from "@/components/ui/image-cursortrail";
 import Dashboard from "./components/Dashboard";
 import Navbar from "./components/Navbar";
 import PostList from "./components/PostList";
+ 
 
 
 
@@ -8,6 +11,8 @@ import PostList from "./components/PostList";
 
 // Fetch posts
 const getPosts = async () => {
+  
+
   try {
     const res = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/api/blog`, {
       cache: "no-cache",
@@ -26,13 +31,16 @@ const getPosts = async () => {
 };
 
 export default async function Home() {
+ 
   const posts = await getPosts();
 
   return (
     <main>
+      
       <Navbar />
       <Dashboard />
       <PostList posts={posts} />
+      
     </main>
   );
 }
