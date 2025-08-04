@@ -28,6 +28,7 @@ export default async function Page() {
         <table>
           <thead>
             <tr>
+              <th>Sr.No</th>
               <th>Title</th>
               <th>Author</th>
               <th>Catagory</th>
@@ -37,8 +38,9 @@ export default async function Page() {
             </tr>
           </thead>
           <tbody>
-            {posts.map((item) => (
+            {posts.map((item, index) => (
               <tr key={item._id}>
+                <td>{index +1}</td>
                 <td>{item.title}</td>
                 <td>{item.author}</td>
                 <td>{item.category}</td>

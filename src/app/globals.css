@@ -65,20 +65,15 @@ table {
     width: 90%;
     overflow-x: auto;
   }
-  th{
-    background-color: #F5F5F5;
-  }
+  
 
   td, th {
-    border: 1px solid #dddddd;
+   
     text-align: left;
     padding: 8px;
 
   }
 
-  tr:nth-child(even){
-    background-color: #F5F5F5 ;
-  }
 
   @theme inline {
     --radius-sm: calc(var(--radius) - 4px);
