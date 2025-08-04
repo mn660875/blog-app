@@ -95,6 +95,7 @@ export default function Page() {
               <option value="/imgs/Astronomy.jpg">Astronomy</option>
               <option value="/imgs/web-2.jpg">web-2</option>
               <option value="/imgs/trade.jpg">Trade</option>
+              <option value="/imgs/Trade-2.jpg">Trade-2</option>
 
             </select>
           </div>
