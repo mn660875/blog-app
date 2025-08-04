@@ -20,7 +20,9 @@ const getPosts = async () => {
     const data = await res.json();
 
     if (data.success) {
-      return data.result;
+      return data.result
+    
+      
     } else {
       return [];
     }
